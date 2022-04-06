@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
         android:gravity="center"
-        android:text="Понял"
+        android:text="Дальше"
         android:fontFamily="@font/roboto_medium"
         android:textColor="#232446"
         android:textSize="26dp"
