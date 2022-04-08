@@ -19,11 +19,11 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val bnvMain: MeowBottomNavigation = view.findViewById(R.id.bottomNavigation)
 
-        bnvMain.add(MeowBottomNavigation.Model(1, R.drawable.bmw_grade1))
-        bnvMain.add(MeowBottomNavigation.Model(2, R.drawable.bmw_grade1))
-        bnvMain.add(MeowBottomNavigation.Model(3, R.drawable.bmw_grade1))
-        bnvMain.add(MeowBottomNavigation.Model(4, R.drawable.bmw_grade1))
-        bnvMain.add(MeowBottomNavigation.Model(5, R.drawable.bmw_grade1))
+        bnvMain.add(MeowBottomNavigation.Model(1, R.drawable.shopping_bag))
+        bnvMain.add(MeowBottomNavigation.Model(2, R.drawable.location))
+        bnvMain.add(MeowBottomNavigation.Model(3, R.drawable.home))
+        bnvMain.add(MeowBottomNavigation.Model(4, R.drawable.info_rect))
+        bnvMain.add(MeowBottomNavigation.Model(5, R.drawable.user))
 
         bnvMain.show(3)
 
