@@ -26,22 +26,39 @@ class HomeFragment : Fragment() {
         bnvMain.add(MeowBottomNavigation.Model(5, R.drawable.user))
 
         bnvMain.show(3)
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.replace(R.id.containerFragment,MainFragment())
+            ?.commit()
 
         bnvMain.setOnClickMenuListener {
             when(it.id){
                 1 -> {
                     activity?.supportFragmentManager?.beginTransaction()
-                        ?.replace(R.id.containerFragment,FirstScreen())
+                        ?.replace(R.id.containerFragment,ShopFragment())
                         ?.commit()
                 }
                 2 -> {
                     activity?.supportFragmentManager?.beginTransaction()
-                        ?.replace(R.id.containerFragment,SecondScreen())
+                        ?.replace(R.id.containerFragment,LocationFragment())
+                        ?.commit()
+                }
+                3 -> {
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.containerFragment,MainFragment())
+                        ?.commit()
+                }
+                4 -> {
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.containerFragment,InfoFragment())
+                        ?.commit()
+                }
+                5 -> {
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.replace(R.id.containerFragment,UserFragment())
                         ?.commit()
                 }
             }
         }
-
         return view
     }
 }
