@@ -2,13 +2,12 @@ package ru.mirea.getcar
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
-import ru.mirea.getcar.R
-import ru.mirea.getcar.onboarding.screens.FirstScreen
-import ru.mirea.getcar.onboarding.screens.SecondScreen
 
 
 class HomeFragment : Fragment() {
