@@ -14,11 +14,18 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         val view = inflater.inflate(R.layout.fragment_user, container, false)
-        val reg_button: ImageView = view.findViewById(R.id.imageView17)
+        val reg_button: ImageView = view.findViewById(R.id.reg_button)
+        val auth_button: ImageView = view.findViewById(R.id.auth_button)
 
         reg_button.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.containerFragment, RegFragment())
+                ?.commit()
+        }
+
+        auth_button.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.containerFragment, AuthFragment())
                 ?.commit()
         }
 
