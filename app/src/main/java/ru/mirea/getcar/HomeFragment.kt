@@ -2,10 +2,8 @@ package ru.mirea.getcar
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 
@@ -53,7 +51,7 @@ class HomeFragment : Fragment() {
                 }
                 5 -> {
                     activity?.supportFragmentManager?.beginTransaction()
-                        ?.replace(R.id.containerFragment,UserFragment())
+                        ?.replace(R.id.containerFragment, UserFragment())
                         ?.commit()
                 }
             }
