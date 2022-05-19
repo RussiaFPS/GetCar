@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853560230313",
+    "project_id": "getcar-32ef4",
+    "storage_bucket": "getcar-32ef4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853560230313:android:fbe0dde858a332c31f44b8",
+        "android_client_info": {
+          "package_name": "ru.mirea.getcar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853560230313-bc7ugnv9vuime9j9gibejqicmudnp08g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdxO6ZDawnzB37yNLHpI79ao8b11cyJ5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853560230313-bc7ugnv9vuime9j9gibejqicmudnp08g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
