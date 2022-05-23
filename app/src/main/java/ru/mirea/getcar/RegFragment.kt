@@ -52,6 +52,9 @@ class RegFragment : Fragment() {
 
                                 Toast.makeText(context, "Успешно!", Toast.LENGTH_SHORT)
                                     .show()
+                                activity?.supportFragmentManager?.beginTransaction()
+                                    ?.replace(R.id.containerFragment, AuthFragment())
+                                    ?.commit()
                             }else{
                                 Toast.makeText(context, "Введите номер телефона!", Toast.LENGTH_SHORT)
                                     .show()
