@@ -54,6 +54,7 @@
             android:textSize="24sp"
             android:textColor="#000000"
             android:hint="Логин"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView18" />
@@ -66,6 +67,7 @@
             android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:hint="Пароль"
+            android:inputType="textPassword"
             android:textColor="#000000"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
