@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GetCar">
         <activity
-            android:name=".RegActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:noHistory="true"

@@ -1,17 +1,20 @@
 package ru.mirea.getcar
 
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import org.mindrot.jbcrypt.BCrypt
+
 
 class AuthFragment : Fragment() {
     override fun onCreateView(
@@ -38,6 +41,15 @@ class AuthFragment : Fragment() {
                     if(BCrypt.checkpw(auth_pass.text.toString(), it.value.toString())){
                         Toast.makeText(context, "Успешно!", Toast.LENGTH_SHORT)
                             .show()
+
+                        val sharedPref = activity?.getPreferences(MODE_PRIVATE)
+                        if (sharedPref != null) {
+                            with (sharedPref.edit()) {
+                                putString("login", auth_login.text.toString())
+                                apply()
+                            }
+                        }
+
                     }else{
                         Toast.makeText(context, "Неверный логин или пароль!", Toast.LENGTH_SHORT)
                             .show()
