@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F8FF">
+
+        <ImageView
+            android:id="@+id/return_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/back_butt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="Настройки"
+            android:textColor="#19104E"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/settings_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/back_reg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_text" />
+
+        <CheckBox
+            android:id="@+id/isChangePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Сменить пароль"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_pass" />
+
+        <EditText
+            android:id="@+id/new_pass"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:hint="Новый пароль"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settings_back" />
+
+        <EditText
+            android:id="@+id/new_phone"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:hint="Новый номер телефона"
+            android:inputType="phone"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/settings_back"
+            app:layout_constraintStart_toStartOf="@+id/settings_back"
+            app:layout_constraintTop_toBottomOf="@+id/isChangePass" />
+
+        <CheckBox
+            android:id="@+id/isChangePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Сменить номер телефона"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_phone" />
+
+        <ImageView
+            android:id="@+id/reg_conf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/conf_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_phone" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

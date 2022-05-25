@@ -20,6 +20,7 @@ class ProfileFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
         val user_name: TextView = view.findViewById(R.id.ProfileLogin)
         val exit_button:ImageView = view.findViewById(R.id.exit_button)
+        val settings_button:ImageView = view.findViewById(R.id.settings_button)
 
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
         val login = sharedPref?.getString("login", "Пользователь")
@@ -28,6 +29,12 @@ class ProfileFragment : Fragment() {
         }else{
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.containerFragment, UserFragment())
+                ?.commit()
+        }
+
+        settings_button.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.containerFragment, SettingsFragment())
                 ?.commit()
         }
 
