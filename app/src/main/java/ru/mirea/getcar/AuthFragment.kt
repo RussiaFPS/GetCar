@@ -39,15 +39,17 @@ class AuthFragment : Fragment() {
             database.child("users").child(auth_login.text.toString()).child("password").get().addOnSuccessListener {
                 if (it.value!=null) {
                     if(BCrypt.checkpw(auth_pass.text.toString(), it.value.toString())){
-                        Toast.makeText(context, "Успешно!", Toast.LENGTH_SHORT)
-                            .show()
-
                         val sharedPref = activity?.getPreferences(MODE_PRIVATE)
                         if (sharedPref != null) {
                             with (sharedPref.edit()) {
                                 putString("login", auth_login.text.toString())
                                 apply()
                             }
+                            activity?.supportFragmentManager?.beginTransaction()
+                                ?.replace(R.id.containerFragment, ProfileFragment())
+                                ?.commit()
+                            Toast.makeText(context, "Успешно!", Toast.LENGTH_SHORT)
+                                .show()
                         }
 
                     }else{
