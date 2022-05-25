@@ -26,6 +26,12 @@ class UserFragment : Fragment() {
         val login = sharedPref?.getString("login", "Пользователь")
         user_name.text=login
 
+        if(login!="Пользователь"){
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.containerFragment, ProfileFragment())
+                ?.commit()
+        }
+
         reg_button.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.containerFragment, RegFragment())
