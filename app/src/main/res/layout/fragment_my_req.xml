@@ -77,7 +77,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="Модель машины"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/req_column2"
@@ -86,7 +86,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="Статус"
                         android:textColor="#000000"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </TableRow>
             </TableLayout>
         </ScrollView>
