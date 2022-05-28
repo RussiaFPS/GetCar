@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -24,11 +21,23 @@ class ShopFragment : Fragment() {
         var cars:MutableList<Cars> = mutableListOf()
         database.child("cars").get().addOnSuccessListener { it1 ->
             var count = 0
+            var model:String=""
+            var image:String=""
+            var cost:String=""
 
             while (count<it1.childrenCount) {
                 database.child("cars").child(count.toString()).child("model").get().addOnSuccessListener { it2 ->
-                    cars.add(Cars(it2.value.toString()))
-                    var customAdapter = CustomAdapter(this,cars)
+                   model=it2.value.toString()
+                }
+
+                database.child("cars").child(count.toString()).child("image").get().addOnSuccessListener { it3 ->
+                    image = it3.value.toString()
+                }
+
+                database.child("cars").child(count.toString()).child("cost").get().addOnSuccessListener { it4 ->
+                    cost = it4.value.toString()
+                    cars.add(Cars(model,image,cost))
+                    var customAdapter = CustomAdapter(this, cars)
                     listViewCars.adapter = customAdapter
                 }
 
@@ -66,9 +75,14 @@ class CustomAdapter(private val context: ShopFragment,private val cars:MutableLi
         var inflater = context.layoutInflater
         var view1 = inflater.inflate(R.layout.list_item,null)
 
-        var text = view1.findViewById<TextView>(R.id.item_name_cars)
+        val text = view1.findViewById<TextView>(R.id.item_name_cars)
+        val item_price_cars = view1.findViewById<TextView>(R.id.item_price_cars)
+        val item_img_cars = view1.findViewById<ImageView>(R.id.item_img_cars)
 
         text.text = cars[p0].model
+        item_price_cars.text = cars[p0].cost
+        item_img_cars.setImageDrawable(this.context.resources.getDrawable(cars[p0].image.toString().toInt()))
+
         return view1
     }
 
