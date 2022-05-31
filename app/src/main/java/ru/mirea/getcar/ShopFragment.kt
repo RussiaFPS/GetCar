@@ -1,11 +1,12 @@
 package ru.mirea.getcar
 
+import android.app.FragmentManager
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.fragment.app.Fragment
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -39,6 +40,16 @@ class ShopFragment : Fragment() {
                     cars.add(Cars(model,image,cost))
                     var customAdapter = CustomAdapter(this, cars)
                     listViewCars.adapter = customAdapter
+
+                    listViewCars.setOnItemClickListener { adapterView, view, i, l ->
+                        val fragment = ChoiceCarFragment()
+                        val bundle = Bundle()
+                        bundle.putInt("idCar", i)
+                        fragment.arguments = bundle
+                        activity?.supportFragmentManager?.beginTransaction()
+                            ?.replace(R.id.containerFragment, fragment)
+                            ?.commit()
+                    }
                 }
 
                 count++

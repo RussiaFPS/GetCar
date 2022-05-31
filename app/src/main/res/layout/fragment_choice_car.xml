@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoiceCarFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F8FF">
+
+        <ImageView
+            android:id="@+id/return_butt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/back_butt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textAutoChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="Выбор авто"
+            android:textColor="#19104E"
+            android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageBackChoice"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/back_list_cars"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textAutoChoice" />
+
+        <TextView
+            android:id="@+id/ChoiceCarName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#19104E"
+            android:textSize="24sp"
+            android:text="Name"
+            app:layout_constraintTop_toTopOf="@+id/imageBackChoice" />
+
+        <ImageView
+            android:id="@+id/ChoiceCarImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:src="@drawable/mercedes_s500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ChoiceCarName" />
+
+        <TextView
+            android:id="@+id/ChoiceCarCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#19104E"
+            android:textSize="14sp"
+            android:text="30000$"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ChoiceCarName" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/back_choice"
+            app:layout_constraintTop_toBottomOf="@+id/ChoiceCarImage" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Описание"
+            android:textColor="#19104E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageBackChoice"
+            app:layout_constraintTop_toTopOf="@+id/imageView17" />
+
+        <TextView
+            android:id="@+id/ChoiceCarDesc"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="75dp"
+            android:textSize="16sp"
+            android:text="Desc"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <ImageView
+            android:id="@+id/choice_butt_req"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/choice_reg_butt"
+            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

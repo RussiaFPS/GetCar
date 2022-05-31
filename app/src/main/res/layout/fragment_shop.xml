@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:text="Каталог авто"
             android:textColor="#19104E"
