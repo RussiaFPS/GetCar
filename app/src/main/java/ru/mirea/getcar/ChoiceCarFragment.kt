@@ -27,6 +27,7 @@ class ChoiceCarFragment : Fragment() {
         val choice_butt_req:ImageView = view.findViewById(R.id.choice_butt_req)
         val bundle = arguments
         val idCar = bundle!!.getInt("idCar")
+        val backCode = bundle.getString("view")
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
         val login = sharedPref?.getString("login", "Пользователь")
         val database = Firebase.database.reference
@@ -63,9 +64,15 @@ class ChoiceCarFragment : Fragment() {
        }
 
         return_butt.setOnClickListener {
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.containerFragment, ShopFragment())
-                ?.commit()
+            if(backCode!="main") {
+                activity?.supportFragmentManager?.beginTransaction()
+                    ?.replace(R.id.containerFragment, ShopFragment())
+                    ?.commit()
+            }else{
+                activity?.supportFragmentManager?.beginTransaction()
+                    ?.replace(R.id.containerFragment, MainFragment())
+                    ?.commit()
+            }
         }
 
         return view

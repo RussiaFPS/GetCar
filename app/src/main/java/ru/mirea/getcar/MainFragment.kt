@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import org.w3c.dom.Text
@@ -89,6 +90,17 @@ class MainFragment : Fragment() {
                         .addOnSuccessListener { it2 ->
                             firstCar.setImageDrawable(resources.getDrawable(it1.value.toString().toInt()))
                             nameFirstCar.text = it2.value.toString()
+
+                            firstCar.setOnClickListener {
+                                val fragment = ChoiceCarFragment()
+                                val bundle = Bundle()
+                                bundle.putInt("idCar", rd.toInt())
+                                bundle.putString("view","main")
+                                fragment.arguments = bundle
+                                activity?.supportFragmentManager?.beginTransaction()
+                                    ?.replace(R.id.containerFragment, fragment)
+                                    ?.commit()
+                            }
                         }
                 }
         }
@@ -101,6 +113,17 @@ class MainFragment : Fragment() {
                         secondCar.setImageDrawable(
                             resources.getDrawable(it1.value.toString().toInt()))
                             nameSecondCar.text = it2.value.toString()
+
+                            secondCar.setOnClickListener {
+                                val fragment = ChoiceCarFragment()
+                                val bundle = Bundle()
+                                bundle.putInt("idCar", rd.toInt())
+                                bundle.putString("view","main")
+                                fragment.arguments = bundle
+                                activity?.supportFragmentManager?.beginTransaction()
+                                    ?.replace(R.id.containerFragment, fragment)
+                                    ?.commit()
+                        }
                     }
             }
         }
