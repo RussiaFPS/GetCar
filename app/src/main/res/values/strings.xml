@@ -6,4 +6,5 @@
     <string name="grade2_txt">В нашем приложении вы можете найти автосалон рядом со своим домом</string>
     <string name="grade3_txt">В нашем приложении вы можете получить необходимую информацию перед выбором авто</string>
     <string name="text_info">Наш автосалон – лидирующий, динамично развивающийся автомобильный автосалон в России. На сегодняшний день имеет в своем портфеле 30 автомобильных брендов: Rolls-Royce, Bentley, Aston Martin, Ferrari, Bugatti, Maserati, Mercedes-Benz, Mercedes-АMG, BMW, BMW i, MINI, Motorrad, Audi, Cadillac, Jaguar, Land Rover, Genesis, Volvo, Chrysler, Сhevrolet, Volkswagen, Ford, Jeep, Hyundai, Fiat, Aurus, Peugeot, Citroën, Mitsubishi, KIA.</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoibmlraXRha3J1dDU4IiwiYSI6ImNsM3dyY3I0bjAwaXAzaW56M2l1N2RzemcifQ.Z_FR3U06kENNFB4PMtFtNQ</string>
 </resources>
