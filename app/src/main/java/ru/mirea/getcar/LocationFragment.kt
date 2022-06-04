@@ -19,7 +19,7 @@ class LocationFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_location, container, false)
 
         mapView = view.findViewById(R.id.mapView)
-        mapView?.getMapboxMap()?.loadStyleUri(Style.MAPBOX_STREETS)
+        mapView?.getMapboxMap()?.loadStyleUri("mapbox://styles/nikitakrut58/cl3yubx9p003y15ols1qzfymn")
 
         return view
     }
